@@ -6,23 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ibro.dev</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <p class="random">Hello</p>
-    <div class="shapes">
+    <nav>
+        <ul>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <a href="./about.html">About</a>
+            </li>
+            <li>
+                <a href="#">Projects</a>
+            </li>
+            <li>
+                <a href="#">Talks</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="content">
+        <div class="name animated fadeInDown">
+            <span style="color:blue;" class="name animateupdown rainbow">D</span>
+            <span style="color:green;" class="name animateupdown rainbow">E</span>
+            <span style="color:yellow;" class="name animateupdown rainbow">V</span>
+
+        </div>
+        <div class="name animated fadeInUp"> <span class="animateupdown rainbow">I</span>
+            <span class="animateupdown rainbow">B</span>
+            <span class="animateupdown rainbow">R</span>
+            <span class="animateupdown rainbow">A</span>
+            <span class="animateupdown rainbow">H</span>
+            <span class="animateupdown rainbow">I</span>
+            <span class="animateupdown rainbow">M</span>
+        </div>
+        <div class="intro">
+            <p>I really like writing code.</p>
+            <p>Especially in C# and JavaScript.</p>
+        </div>
+    </div>
+    <!-- <div class="shapes">
+        hsckbiubvjknk hvoabnav ilnlhianibvnkjhnkinlhkin
         <div id="box"></div>
         <div id="oval"></div>
         <div id="heart"></div>
         <div class="animatespin" id="triangle-up"></div>
         <div class="animateupdown" id="circle"></div>
         <div id="triangle-down"></div>
-    </div>
-    
-        <img id="thing" src="//www.kirupa.com/images/smiley_red.png">
-    
-    
+    </div> -->
+    <canvas style="position:relative; opacity: 0.5;" id="draw">
+    </canvas>
+
     <!-- src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script> -->
