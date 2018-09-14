@@ -1,0 +1,103 @@
+.shapes{
+    opacity: 0.5;
+}
+#box{
+    width: 200px;
+    height: 200px;
+    background: repeating-linear-gradient(red, orange 50px);
+    clip-path: inset(50px 25px);
+} 
+
+#circle{
+    width: 100px;
+	height: 100px;
+	background: red;
+	border-radius: 50px;
+}
+#oval {
+	width: 200px;
+	height: 100px;
+	background: red;
+    background: repeating-linear-gradient(red, orange 50px);
+	border-radius: 100px / 50px;
+}
+#triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+}
+#triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid red;
+}
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}
+
+/* Create an updown animation */
+.animateupdown {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: updown 3s linear  infinite alternate;
+}
+@keyframes updown {
+    from { background:red; left:0px; top:0px;}
+    to { background:green;  top:30px;}
+}
+
+/* Performs a Spin */
+.animatespin {
+    transition: transform .8s ease-in-out;
+  }
+  .animatespin:hover {
+    transform: rotate(360deg);
+  }
+
+
+  body {
+    background-color: #FFF;
+    margin: 30px;
+    margin-top: 10px;
+}
+/* #contentContainer {
+    width: 550px;
+    height: 350px;
+    border: 5px black solid;
+    overflow: hidden;
+    background-color: #F2F2F2;
+    cursor: pointer;
+} */
+#thing {
+    position: relative;
+    left: 50px;
+    top: 50px;
+    transition: left .5s ease-in, top .5s ease-in;
+}
