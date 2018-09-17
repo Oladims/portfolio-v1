@@ -3,7 +3,7 @@ body{
 }
 /* NAV SECTION */
     nav{
-      font-size: 80px;
+      font-size: 15px;
       font-weight: 400;
       display: flex;
       justify-content: space-around;
@@ -11,7 +11,7 @@ body{
 
 ul.topnav {
     list-style-type: none;
-    margin: 0;
+
     padding: 0;
     overflow: hidden;
     background-color: transparent;
@@ -19,7 +19,7 @@ ul.topnav {
 
 ul.topnav li {
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 20px;
     /* cursor: pointer; */
 }
 
@@ -44,21 +44,23 @@ ul.topnav li a.active {
     line-height: -10px;
     margin-left: 30px;
 }
-.dev{
-}
 
 .ibrahim{
     position: relative;
     top: -42px;
     /* position: relative; */
 }
-
+/*
 .animateupdown {
-        animation: downup 5s linear alternate;
+        animation: downup 5s linear 2s infinite alternate;
 }
 .animateupdown:hover{
-        animation: updown 5s linear  infinite alternate;
+        animation: updown 5s linear 2s  infinite alternate;
 }
+@keyframes animateupdown {
+    from {top : 0px;}
+    to {top: 30px;}
+} */
 .intro {
     position: relative;
     margin-left: 30px;
@@ -97,16 +99,85 @@ grid-area: 'pic';
     grid-area: 'text';
 }
 
-
-
-/*
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
+
 }
+
+/* Small devices (portrait tablets and large phones, 360px and up) */
+@media only screen and (min-width: 320px) {
+    nav {
+        font-size: 5vw;
+        font-weight: 500;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+    .content {
+        padding-top: 21vh;
+        padding-left: 20px;
+    }
+
+    .name   {
+        font-size: 21vw;
+    }
+    .dev    {
+        margin: 0;
+    }
+
+    .ibrahim    {
+        position: relative;
+        top: -22px;
+        margin: 0;
+    }
+    .intro  {
+        margin: 0;
+        line-height: 5px;
+        font-size: 5vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    nav {
+        font-size: 35px;
+        font-weight: 500;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+    .content {
+        padding-left: 20px;
+    }
+
+    .name   {
+        position: relative;
+        top: -200px;
+    font-size: 250px;
+    letter-spacing: -35px;
+    font-weight: 800;
+
+    }
+    .dev    {
+        margin: 0;
+    }
+
+    .ibrahim    {
+        position: relative;
+        top: -300px;
+        margin: 0;
+    }
+    .intro  {
+        position: relative;
+        top: -350px;
+        margin: 0;
+        line-height: 5px;
+        font-size: 3vw;
+    }
+}
+
+
 
