@@ -1,16 +1,42 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 nav {
+    border: 1px solid blue;
 
-    right:10px;
+    float:right;
+    font-size: 15px;
+    font-weight: 400;
+
   }
+/* END NAV SECTION */
 
 .name{
-    font-size: 60px;
-    margin-left: 10px;
+    border: 1px solid red;
+    font-size: 80px;
+    letter-spacing: -13px;
+    font-weight: 800;
+    line-height: -10px;
+    margin-left: 30px;
+}
+
+.dev{
+top:100px;
+}
+
+.ibrahim{
+    top: -42px;
+    /* position: relative; */
 }
 
 .intro {
-    margin-left: 10px;
+    position: relative;
+    margin-left: 30px;
+    top: -40px;
+    line-height: 5px;
+    font-size: 10px;
+    font-weight: bolder;
+    color: #4a4a4a;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid green;
 }
 }
