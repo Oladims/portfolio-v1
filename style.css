@@ -3,11 +3,10 @@ body{
 }
 /* NAV SECTION */
     nav{
-        border: 1px solid blue;
-    float:right;
-      font-size: 10px;
+      font-size: 80px;
       font-weight: 400;
-      margin-right:40px;
+      display: flex;
+      justify-content: space-around;
   }
 
 ul.topnav {
@@ -39,7 +38,6 @@ ul.topnav li a.active {
 
 /* END NAV SECTION */
 .name{
-    border: 1px solid red;
     font-size: 80px;
     letter-spacing: -13px;
     font-weight: 800;
@@ -70,25 +68,8 @@ ul.topnav li a.active {
     font-weight: bolder;
     color: #4a4a4a;
     font-family: 'Lato', sans-serif;
-    border: 1px solid green;
 }
 
-@keyframes updown {
-        from {   top:0px;}
-    to {   top:100px;}
-}
-@keyframes downup {
-        from {   top:10px;}
-    to {   top:0px;}
-}
-
-/* Performs a Spin */
- .animatespin {
-         transition: transform .8s ease-in-out ;
-  }
-   .animatespin:hover {
-         transform: rotate(360deg);
-  }
 
 .header{
     font-family: 'Lato', sans-serif;
@@ -117,11 +98,8 @@ grid-area: 'pic';
 }
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
 
-}
-
+/*
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
@@ -131,5 +109,4 @@ grid-area: 'pic';
 @media only screen and (min-width: 992px) {
 
 }
-
 
