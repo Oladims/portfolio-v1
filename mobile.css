@@ -1,74 +1,16 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 nav {
-    border: 1px solid blue;
-    position: relative;
-    float:right;
-    font-size: 10px;
-    font-weight: 400;
+
     right:10px;
   }
 
-ul.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-}
-
-ul.topnav li {
-    display: inline-block;
-    margin-right: 5px;
-    /* cursor: pointer; */
-}
-
-ul.topnav li a {
-    display: inline;
-    color: #4a4a4a;
-    text-align: center;
-    text-decoration: none;
-}
-
-ul.topnav li a.active {
-    text-decoration: underline;
-    color: rgba(0, 35, 122, 0.7);
-}
-
-
-/* END NAV SECTION */
 .name{
-    border: 1px solid red;
     font-size: 60px;
-    letter-spacing: -13px;
-    font-weight: 800;
-    line-height: -10px;
-    margin-left: 30px;
-}
-.dev{
+    margin-left: 10px;
 }
 
-.ibrahim{
-    position: relative;
-    top: -42px;
-    /* position: relative; */
-}
-
-.animateupdown {
-        animation: downup 5s linear alternate;
-}
-.animateupdown:hover{
-        animation: updown 5s linear  infinite alternate;
-}
 .intro {
-    position: relative;
-    margin-left: 30px;
-    top: -40px;
-    line-height: 5px;
-    font-size: 10px;
-    font-weight: bolder;
-    color: #4a4a4a;
-    font-family: 'Lato', sans-serif;
-    border: 1px solid green;
+    margin-left: 10px;
 }
 }

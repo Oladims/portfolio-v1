@@ -1,18 +1,94 @@
-
-.name{
+body{
     font-family: 'Lato', sans-serif;
-    font-size: 50px;
-    letter-spacing: -8px;
+}
+/* NAV SECTION */
+    nav{
+        border: 1px solid blue;
+    float:right;
+      font-size: 10px;
+      font-weight: 400;
+      margin-right:40px;
+  }
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+ul.topnav li {
+    display: inline-block;
+    margin-right: 5px;
+    /* cursor: pointer; */
+}
+
+ul.topnav li a {
+    display: inline;
+    color: #4a4a4a;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul.topnav li a.active {
+    text-decoration: underline;
+    color: rgba(0, 35, 122, 0.7);
+}
+
+
+/* END NAV SECTION */
+.name{
+    border: 1px solid red;
+    font-size: 80px;
+    letter-spacing: -13px;
     font-weight: 800;
-    opacity: .8;
+    line-height: -10px;
+    margin-left: 30px;
+}
+.dev{
+}
+
+.ibrahim{
+    position: relative;
+    top: -42px;
+    /* position: relative; */
+}
+
+.animateupdown {
+        animation: downup 5s linear alternate;
+}
+.animateupdown:hover{
+        animation: updown 5s linear  infinite alternate;
 }
 .intro {
+    position: relative;
+    margin-left: 30px;
+    top: -40px;
     line-height: 5px;
     font-size: 10px;
     font-weight: bolder;
     color: #4a4a4a;
     font-family: 'Lato', sans-serif;
+    border: 1px solid green;
 }
+
+@keyframes updown {
+        from {   top:0px;}
+    to {   top:100px;}
+}
+@keyframes downup {
+        from {   top:10px;}
+    to {   top:0px;}
+}
+
+/* Performs a Spin */
+ .animatespin {
+         transition: transform .8s ease-in-out ;
+  }
+   .animatespin:hover {
+         transform: rotate(360deg);
+  }
 
 .header{
     font-family: 'Lato', sans-serif;
@@ -39,153 +115,21 @@ grid-area: 'pic';
 .aboutext{
     grid-area: 'text';
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .about{
-        display: grid;
-        grid-template-areas: 'pic' 'text';
-    }
-}
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .about{
-        display: grid;
-        grid-template-areas: 'pic' 'text';
-    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .about{
-        display: grid;
-        grid-template-areas: 'pic text text';
-    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .about{
-        display: grid;
-        grid-template-areas: 'pic text text';
-    }
-}
-.shapes{
-    position: absolute;
-}
-.transparent{
-    opacity: 0.5;
-}
-#box{
-    width: 200px;
-    height: 200px;
-    background: repeating-linear-gradient(red, orange 50px);
-    clip-path: inset(50px 25px);
-    position: absolute;
+
 }
 
-#circle{
-    width: 100px;
-	height: 100px;
-	background: red;
-    position: absolute;
-	border-radius: 50px;
-}
-#oval {
-	width: 200px;
-	height: 100px;
-	background: red;
-    background: repeating-linear-gradient(red, orange 50px);
-    position: absolute;
-	border-radius: 100px / 50px;
-}
-#triangle-up {
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-    position: absolute;
-	border-bottom: 100px solid red;
-}
-#triangle-down {
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-top: 100px solid red;
-}
-/* #heart {
-    position: relative;
-    width: 100px;
-    height: 90px;
-}
-#heart:before,
-#heart:after {
-    position: absolute;
-    content: "";
-    left: 50px;
-    top: 0;
-    width: 50px;
-    height: 80px;
-    background: red;
-    -moz-border-radius: 50px 50px 0 0;
-    border-radius: 50px 50px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-}
-#heart:after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin :100% 100%;
-} */
 
-/* Create an updown animation */
-.animateupdown {
-    width: 100px;
-    height: 100px;
-    /* background-color: red; */
-    position: relative;
-    animation: downup 5s linear alternate;
-}
-.animateupdown:hover{
-    animation: updown 5s linear  infinite alternate;
-}
-@keyframes updown {
-    from {   top:0px;}
-    to {   top:10px;}
-}
-@keyframes downup {
-    from {   top:10px;}
-    to {   top:0px;}
-}
-
-/* Performs a Spin */
-.animatespin {
-    transition: transform .8s ease-in-out ;
-  }
-  .animatespin:hover {
-    transform: rotate(360deg);
-  }
-
-
-/* NAV SECTION */
-  /* nav ul {
-    text-align: center;
-  } */
-  nav ul li {
-    display: inline-block;
-  }
-  nav ul li a {
-    color: rgba(0, 35, 122, 0.5);
-    font-size: 10px;
-    text-decoration: none;
-  }
- li a {
-    font-size: 30px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-    color: rgba(0, 35, 122, 0.7);
-  }
-/* END NAV SECTION */
