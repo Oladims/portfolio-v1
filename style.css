@@ -2,16 +2,15 @@ body{
     font-family: 'Lato', sans-serif;
 }
 /* NAV SECTION */
-    nav{
-      font-size: 15px;
-      font-weight: 400;
-      display: flex;
-      justify-content: space-around;
-  }
+nav{
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+}
 
 ul.topnav {
     list-style-type: none;
-
     padding: 0;
     overflow: hidden;
     background-color: transparent;
@@ -37,6 +36,17 @@ ul.topnav li a.active {
 
 
 /* END NAV SECTION */
+html, body {
+    overflow: hidden;
+}
+canvas{
+    position: absolute;
+    z-index: -1;
+}
+body > div{
+    background: rgba(255, 255, 255, .5);
+}
+
 .name{
     font-size: 80px;
     letter-spacing: -13px;
@@ -50,17 +60,7 @@ ul.topnav li a.active {
     top: -42px;
     /* position: relative; */
 }
-/*
-.animateupdown {
-        animation: downup 5s linear 2s infinite alternate;
-}
-.animateupdown:hover{
-        animation: updown 5s linear 2s  infinite alternate;
-}
-@keyframes animateupdown {
-    from {top : 0px;}
-    to {top: 30px;}
-} */
+
 .intro {
     position: relative;
     margin-left: 30px;
