@@ -1,80 +1,48 @@
-animatecolor = () => setInterval(changeColor, 2000);
-// Selects a background color from a set of random colors at intervals
-changeColor = () => {
-  let rainbowText = document.getElementsByClassName('rainbow');
-  let bgcolors1 = ['#fd3', '#f0532c', '#3db161', '#e8c0ff'];
-  let bgcolors2 = ['#FF00FF', '#000080', '#008080', '##00FFFF'];
-  let bgcolors3 = ['#000000', '#808000', '#FF5733', '#bd9986'];
-  let bgcolor1 = bgcolors1[Math.floor(Math.random() * bgcolors1.length)];
-  let bgcolor2 = bgcolors2[Math.floor(Math.random() * bgcolors2.length)];
-  let bgcolor3 = bgcolors3[Math.floor(Math.random() * bgcolors3.length)];
-    // document.body.style.background = bgcolor;
+var canvas = $("canvas");
 
-    rainbowText[0].style.color = bgcolor1;
-    rainbowText[1].style.color = bgcolor2;
-    rainbowText[2].style.color = bgcolor3;
-    rainbowText[3].style.color = bgcolor2;
-    rainbowText[4].style.color = bgcolor1;
-    rainbowText[5].style.color = bgcolor3;
-    rainbowText[6].style.color = bgcolor2;
-    rainbowText[7].style.color = bgcolor1;
-    rainbowText[8].style.color = bgcolor3;
-    rainbowText[9].style.color = bgcolor2;
-}
-animatecolor();
+var ctx = canvas[0].getContext("2d"),
+  width = $(document).width(),
+  height = $(document).height(),
+  a = 0, b = 0;
+let hue = 0;
 
 
-
-const canvas = document.querySelector('#draw');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.attr("width", width);
+canvas.attr("height", height);
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = 10;
-// ctx.globalCompositeOperation = 'multiply';
+ctx.lineWidth = 100;
 
-let isDrawing = false;
-let lastX = 0;
-let lastY = 0;
-let hue = 0;
-let direction = true;
+canvas[0].addEventListener("click", drawRectangle);
 
-function draw(e) {
-  if (!isDrawing) return; // stop the fn from running when they are not moused down
-  console.log(e);
-  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+function drawCircle(e) {
+  ctx.globalAlpha = 0.5; // set global alpha
   ctx.beginPath();
-  // start from
-  ctx.moveTo(lastX, lastY);
-  // go to
-  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.arc(e.clientX, e.clientY, 70, 0, 2 * Math.PI, false);
+  ctx.fillStyle = "red";
+  ctx.fill();
+};
+
+function drawRectangle(e) {
+  ctx.globalAlpha = 0.5; // set global alpha
+  ctx.beginPath();
+  ctx.rect(e.clientX, e.clientY, 100, 50);
+  ctx.fillStyle = "green";
+  ctx.fill();
+  ctx.lineWidth = 1;
+  ctx.strokeStyle = 'green';
   ctx.stroke();
-  [lastX, lastY] = [e.offsetX, e.offsetY];
+};
 
-  hue++;
-  if (hue >= 360) {
-    hue = 0;
-  }
-  if (ctx.lineWidth >= 10 || ctx.lineWidth <= 1) {
-    direction = !direction;
-  }
-
-  if(direction) {
-    ctx.lineWidth++;
-  } else {
-    ctx.lineWidth--;
-  }
-
+//MAIN PART
+function simulate(e) {
+  var evt = document.createEvent("MouseEvents");
+  evt.initMouseEvent("click", true, true, window,
+    0, e.screenX, e.screenY, e.clientX, e.clientY, false, false, false, false, 0, null);
+  canvas[0].dispatchEvent(evt);
 }
 
-canvas.addEventListener('mousedown', (e) => {
-  isDrawing = true;
-  [lastX, lastY] = [e.offsetX, e.offsetY];
+$("body > div").each(function () {
+  this.addEventListener("click", simulate);
 });
-
-
-canvas.addEventListener('mousemove', draw);
-canvas.addEventListener('mouseup', () => isDrawing = false);
-canvas.addEventListener('mouseout', () => isDrawing = false);
