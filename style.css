@@ -3,6 +3,8 @@ body{
 }
 /* NAV SECTION */
 nav{
+    position: relative;
+    top: -20px;
     font-size: 15px;
     font-weight: 400;
     display: flex;
@@ -57,7 +59,7 @@ body > div{
 
 .ibrahim{
     position: relative;
-    top: -42px;
+    top: -32px;
     /* position: relative; */
 }
 
@@ -79,14 +81,18 @@ body > div{
     font-size: 35px;
     font-weight:bolder;
     opacity: .8;
+    margin-left: 4vw;
 }
 
 .socialmedialinks{
-    padding-top: 10px;
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
 }
-
+.titlespan {
+    font-size: 100px;
+    letter-spacing: -10px;
+}
 .about{
     display: grid;
     grid-template-areas: 'pic text text';
