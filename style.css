@@ -1,13 +1,48 @@
-body{
+
+.chatbox {
+    display: block;
+    float: right;
+    position: sticky;
+    bottom: 10px;
+    right: 2vw;
+    border-radius: 50%;
+    background-color: aqua;
+    width: 4em;
+    height: 4em;
+
+}
+.chat {
+    display: flex;
+    justify-content: center;
+    float: right;
+    position: sticky;
+    bottom: 10px;
+    right: 2vw;
+    border-radius: 50%;
+    background-color: aqua;
+    width: 4em;
+    height: 4em;
+
+}
+.chat i{
+padding-top: 10px;
+}
+.chat:hover{
+    cursor: pointer;
+}
+body {
     font-family: 'Lato', sans-serif;
 }
+
 /* NAV SECTION */
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: flex-end;
     padding-right: 7%;
 }
-nav{
+
+nav {
     position: relative;
     top: -20px;
     font-size: 15px;
@@ -41,29 +76,33 @@ ul.topnav li a.active {
     color: rgba(0, 35, 122, 0.7);
 }
 
-
 /* END NAV SECTION */
+/*
 html, body {
     overflow: hidden;
-}
-canvas{
+} */
+
+canvas {
     position: absolute;
     z-index: -1;
 }
-body > div{
+
+body>div {
     background: rgba(255, 255, 255, .5);
 }
 
-.name{
+.name {
     font-size: 80px;
     letter-spacing: -13px;
     font-weight: 800;
     line-height: -10px;
 }
-.content{
+
+.content {
     margin-left: 5vw;
 }
-.ibrahim{
+
+.ibrahim {
     position: relative;
     top: -32px;
 }
@@ -77,54 +116,62 @@ body > div{
     color: #4a4a4a;
 }
 
-.header{
+.header {
     letter-spacing: -5px;
     font-size: 35px;
-    font-weight:bolder;
+    font-weight: bolder;
     opacity: .8;
     margin-left: 4vw;
 }
 
-.socialmedialinks{
+.socialmedialinks {
     margin-top: 100px;
     display: flex;
     justify-content: space-around;
     font-size: 6em;
 }
+
 .titlespan {
     font-size: 100px;
     letter-spacing: -10px;
 }
-.about{
 
-}
+.about {}
 
 .hovered:hover {
     animation: hoveranimation ease 3s;
-  }
-  @keyframes hoveranimation {
+}
+
+@keyframes hoveranimation {
     50% {
-      transform: translateY(50px);
+        transform: translateY(50px);
     }
-  }
-.profilepicture{
+}
+
+.profilepicture {
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
 }
-.aboutext{
 
-}
+.aboutext {}
 
 /* Large devices (laptops/desktops, 992px and up) */
+
 @media only screen and (min-width: 992px) {
-
-
+    .name {
+        position: relative;
+        top: -200px;
+        font-size: 250px;
+        letter-spacing: -35px;
+        font-weight: 800;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 360px and up) */
+
 @media only screen and (min-width: 320px) {
-    .navbar{
+    .navbar {
         display: flex;
         justify-content: flex-end;
         padding-right: 5%;
@@ -135,33 +182,30 @@ body > div{
         padding-top: 10px;
         display: flex;
         justify-content: center;
-      }
-
+    }
     .content {
         padding-top: 20vh;
         /* padding-left: 20px; */
     }
-
-    .name   {
+    .name {
         font-size: 21vw;
     }
-    .dev    {
+    .dev {
         margin: 0;
     }
-
-    .ibrahim    {
+    .ibrahim {
         position: relative;
         top: -22px;
         margin: 0;
     }
-    .intro  {
+    .intro {
         margin: 0;
         line-height: 5px;
         font-size: 5vw;
     }
-    .header{
+    .header {
         letter-spacing: -5px;
-        font-weight:bolder;
+        font-weight: bolder;
         opacity: .8;
         margin-left: 4vw;
         border: 3px solid red;
@@ -169,17 +213,16 @@ body > div{
     .titlespan {
         font-size: 13vw;
     }
-
-    .socialmedialinks{
+    .socialmedialinks {
         margin-top: 70px;
         display: flex;
         justify-content: space-around;
         font-size: 3em;
     }
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
+
 @media only screen and (min-width: 768px) {
     nav {
         font-size: 35px;
@@ -187,36 +230,33 @@ body > div{
         padding-top: 10px;
         display: flex;
         justify-content: space-around;
-      }
-
+    }
     .content {
         padding-left: 20px;
     }
-
-    .name   {
+    .name {
         position: relative;
         top: -200px;
-        font-size: 23vw;
+        font-size: 20vw;
         letter-spacing: -35px;
         font-weight: 800;
     }
-    .dev    {
+    .dev {
         margin: 0;
     }
-
-    .ibrahim    {
+    .ibrahim {
         position: relative;
         top: -300px;
         margin: 0;
     }
-    .intro  {
+    .intro {
         position: relative;
         top: -350px;
         margin: 0;
         line-height: 5px;
         font-size: 3vw;
     }
-    .socialmedialinks{
+    .socialmedialinks {
         margin-top: 100px;
         display: flex;
         justify-content: space-around;
@@ -225,8 +265,4 @@ body > div{
     .titlespan {
         font-size: 100px;
     }
-
 }
-
-
-
