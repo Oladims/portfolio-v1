@@ -1,35 +1,110 @@
-
-.chatbox {
-    display: block;
-    float: right;
-    position: sticky;
-    bottom: 10px;
-    right: 2vw;
-    border-radius: 50%;
-    background-color: aqua;
-    width: 4em;
-    height: 4em;
-
-}
-.chat {
+.chaticon {
     display: flex;
     justify-content: center;
     float: right;
-    position: sticky;
+    position: fixed;
     bottom: 10px;
     right: 2vw;
     border-radius: 50%;
     background-color: aqua;
     width: 4em;
     height: 4em;
-
 }
-.chat i{
+.chaticon i{
 padding-top: 10px;
 }
-.chat:hover{
+.chaticon:hover{
     cursor: pointer;
 }
+#chat {
+    visibility: hidden;
+    float: right;
+    position: sticky;
+    bottom: 5em;
+    right: 2vw;
+}
+.chatbox {
+    display: grid;
+    float: right;
+    position: sticky;
+    bottom: 80px;
+    right: 2vw;
+    width: 440px;
+    height: 544px;
+    grid-template-areas: "header" "link";
+    border-radius: 10px;
+    background-color: white;
+}
+
+.chatheader{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    grid-area: header;
+    background-color: aqua !important;
+    height: 190px;    
+    padding:0px 20px 0px 20px;
+}
+
+.chatheader p {
+    font-size: 14px;
+}
+
+.image{
+    transform: translateY(10%); 
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+}
+
+.chatlink{
+    grid-area: link;
+    height: 300px;
+    background-color: burlywood;
+    padding:0px 20px 0px 20px;
+    /* z-index: -1; */
+}
+
+.linkimage{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+}
+.link-icon{
+    width: 20%;
+}
+
+.link-text{
+    width:80%;
+}
+.chat-link-contents{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    padding-top: 30px;
+}
+.chat-link-title{
+    width: 100%;
+    color: rgb(96, 96, 96);
+}
+.chat-link-subtitle{
+    font-size: 12px; 
+    color: rgb(149, 149, 149); 
+}
+.chat-textbox{
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#textbox{
+    border: 0px;
+    width: 80%;
+}
+.chat-textbox i:nth-child(0){
+    align-items: flex-end;
+}
+
 body {
     font-family: 'Lato', sans-serif;
 }
